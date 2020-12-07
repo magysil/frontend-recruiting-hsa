@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.details-container > * {
+  /* box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75); */
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.logo {
+  grid-area: logo;
+  display: flex;
+}
+.logoGit {
+  width: 280px;
+  height: 50px;
+  margin-left: 20px;
+  font-family: Monaco;
+  font-size: 50px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+.logoSch {
+  width: 280px;
+  height: 50px;
+  margin: 10px 0px 50px 0;
+  font-size: 40px;
+  font-family: Raleway;
+  font-weight: 200;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.search {
+  grid-area: search;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 55px;
+}
+.imgSearch {
+  height: 20px;
+}
+#btnSearch {
+  width: 20%;
+  background: #ac53f2;
+  border-color: #ac53f2;
+  margin-left: 15px;
+  border-radius: 6px;
+  height: 40px;
+}
+.userprofile {
+  grid-area: userprofile;
+  text-align: left;
+  margin-left: 28px;
+}
+
+.repository {
+  grid-area: repository;
+}
+
+#inputSearch {
+  height: 40px;
+  width: 100%;
+}
+
+.details-container {
+  gap: 10px;
+  grid-template-columns: 300px auto;
+  grid-template-rows: 50px auto;
+  grid-template-areas:
+    "logo"
+    "search"
+    "userprofile"
+    "repository";
+}
+.reposGit-imgStart {
+  height: 24px;
+  margin-right: 15px;
+}
+.imgavatar {
+  height: 280px;
+  width: 280px;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+.name {
+  font-size: 35px;
+  color: #000;
+  width: 290px;
+  margin-bottom: 7px;
+}
+.name a {
+  text-decoration: none;
+  color: #000;
+}
+.login {
+  font-size: 20px;
+  color: #5c5c5c;
+  margin-bottom: 33px;
+}
+.bio {
+  display: flex;
+  font-size: 20px;
+  color: #5c5c5c;
+  margin-bottom: 14px;
+}
+.email {
+  display: flex;
+  font-size: 20px;
+  color: #5c5c5c;
+  margin-bottom: 14px;
+}
+.rep_public {
+  display: flex;
+  font-size: 20px;
+  color: #5c5c5c;
+  margin-bottom: 14px;
+}
+.fallowers {
+  display: flex;
+  font-size: 20px;
+  color: #5c5c5c;
+  margin-bottom: 14px;
+}
+.star {
+  display: flex;
+  font-size: 20px;
+  color: #5c5c5c;
+  margin-bottom: 14px;
+}
+.reposGit-name {
+  width: 375.5px;
+  height: 40.8px;
+  margin: 37px 274.5px 0 67px;
+  font-family: Raleway;
+  font-size: 35px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ac53f2;
+}
+.repos-name {
+  text-decoration: none;
+  text-align: left;
+}
+.reposGit-description {
+  width: 600px;
+  height: 25.5px;
+  margin: 22.8px 50px 0.7px 67px;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  text-align: left;
+}
+.reposGit-allStart {
+  width: 25.5px;
+  height: 24.5px;
+  margin-top: 10px;
+}
+.reposGit-stars {
+  display: inline-flex;
+  width: 255.3px;
+  height: 22.4px;
+  margin: 11.2px 361.7px 4px 2.4px;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5c5c5c;
+}
+.repos-imgStart {
+  height: 24px;
+  margin-right: 5px;
+  margin-top: 8px;
+}
+@media (min-width: 600px) {
+  .details-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 300px auto;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+      "logo search"
+      "userprofile repository";
+  }
+  #inputSearch {
+    display: block;
+    height: 40px;
+    width: 100%;
+  }
+  #btnSearch {
+    display: block;
+    height: 40px;
+  }
+}

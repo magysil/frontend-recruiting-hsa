@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.home-container > * {
+  /* box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75); */
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.homeLogo {
+  grid-area: logo;
+  display: flex;
+}
+.homeLogoGit {
+  width: 280px;
+  height: 50px;
+  margin-left: 20px;
+  font-family: Monaco;
+  font-size: 50px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+.homeLogoSch {
+  width: 280px;
+  height: 50px;
+  margin: 10px 0px 50px 0;
+  font-size: 40px;
+  font-family: Raleway;
+  font-weight: 200;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.homeSearch {
+  grid-area: search;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 55px;
+}
+.homeImgSearch {
+  height: 20px;
+}
+#homeBtnSearch {
+  width: 40%;
+  background: #ac53f2;
+  border-color: #ac53f2;
+  margin-left: 15px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+#homeInputSearch {
+  height: 40px;
+  width: 100%;
+}
+
+.home-container {
+  gap: 10px;
+  grid-template-columns: 300px auto;
+  grid-template-rows: 50px auto;
+  grid-template-areas:
+    "logo"
+    "search"
+    "userprofile"
+    "repository";
+}
+
+@media (min-width: 600px) {
+  .home-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px auto;
+    grid-template-areas:
+      "logo"
+      "search";
+  }
+  #homeInputSearch {
+    display: block;
+    height: 40px;
+    width: 100%;
+  }
+  #homeBtnSearch {
+    display: block;
+  }
+  .homeLogo {
+    margin-top: 10%;
+    margin-left: 20%;
+  }
+  .homeLogoGit {
+    width: 180px;
+    margin-left: 18%;
+  }
+  .homeLogoSch {
+    width: 0px;
+  }
+  #homeBtnSearch {
+    width: 25%;
+    margin-left: 50px;
+  }
+}
