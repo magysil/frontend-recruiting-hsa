@@ -3,7 +3,15 @@
   margin: 0;
   padding: 0;
 }
-
+.notfound {
+  text-align: center;
+  font-family: Raleway;
+  font-size: 40px;
+  color: #ac53f2;
+}
+.notfoundBox{
+  display: flex;
+}
 .details-container > * {
   /* box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75); */
   border-radius: 4px;

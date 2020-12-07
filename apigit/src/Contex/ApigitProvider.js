@@ -18,13 +18,17 @@ const ApigitProvider = (props) => {
     setResUserGit(userGit);
     setResReposGit(reposGit);
   };
-  resReposGit.sort((a, b) =>
-    a.stargazers_count > b.stargazers_count
-      ? -1
-      : a.stargazers_count < b.stargazers_count
-      ? 1
-      : 0
-  );
+
+  if (resUserGit.message !== "Not Found") {
+    resReposGit.sort((a, b) =>
+      a.stargazers_count > b.stargazers_count
+        ? -1
+        : a.stargazers_count < b.stargazers_count
+        ? 1
+        : 0
+    );
+  }
+
   return (
     <ApigitContext.Provider
       value={{

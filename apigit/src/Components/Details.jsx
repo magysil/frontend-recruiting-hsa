@@ -1,6 +1,7 @@
 import React from "react";
 import "../Style/Details.css";
 import { ApigitContext } from "../Contex/ApigitProvider";
+import NotFound from "./NotFound";
 
 const Details = () => {
   const {
@@ -26,7 +27,11 @@ const Details = () => {
       return (totalST += item.stargazers_count);
     });
   };
-  counterStar();
+
+  if (resUserGit.message !== "Not Found") {
+    counterStar();
+  }
+
   return (
     <>
       <div className="details-container">
@@ -53,7 +58,7 @@ const Details = () => {
         </div>
 
         {resUserGit.message === "Not Found" ? (
-          <p>Usuario no enccontrado</p>
+          <NotFound />
         ) : (
           <>
             <div className="userprofile">
